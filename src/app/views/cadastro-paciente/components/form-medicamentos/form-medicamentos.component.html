@@ -1,0 +1,42 @@
+<div [formGroup]="formulario_medicamento">
+
+    <div class="content-2">
+      <div class="componente-2-2">
+        <mat-form-field appearance="fill">
+          <mat-label>Medicação</mat-label>
+          <input matInput placeholder="" formControlName="nome" required>
+        </mat-form-field>
+
+      </div>
+      <div class="componente-2-2">
+        <mat-form-field appearance="fill">
+          <mat-label>Finalidade</mat-label>
+          <input matInput placeholder="" formControlName="finalidade" required>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="content-1">
+
+      <div class="componente-1-3">
+        <mat-form-field appearance="fill">
+          <mat-label>Dosagem</mat-label>
+          <input matInput placeholder="" formControlName="dosagem" required>
+        </mat-form-field>
+      </div>
+
+      <div class="componente-1-3">
+        <mat-form-field appearance="fill">
+          <mat-label>Horário</mat-label>
+          <input matInput placeholder="" formControlName="horario" required>
+        </mat-form-field>
+      </div>
+
+      <div class="componente-1-3">
+        <mat-form-field appearance="fill">
+          <mat-label>Data de Início</mat-label>
+          <input matInput placeholder="" formControlName="data_inicio" required>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>

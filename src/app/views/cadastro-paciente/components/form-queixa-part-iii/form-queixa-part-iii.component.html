@@ -1,0 +1,29 @@
+<!-- Dados da Queixa - 3 -->
+
+<form [formGroup]="formulario_queixa">
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Reação da familia e ambiente</mat-label>
+      <textarea matInput formControlName="reacao_familia_ambiente"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Antecedentes Familiares</mat-label>
+      <textarea matInput formControlName="antecedentes_familiares"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Tratamentos Anteriores e/ou Paralelos</mat-label>
+      <textarea matInput formControlName="tratamentos_anteriores"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Linguagem</mat-label>
+      <textarea matInput formControlName="linguagem"></textarea>
+    </mat-form-field>
+
+    <div class="bottom-btn">
+      <button mat-button matStepperPrevious class="btn">Voltar</button>
+      <button mat-button matStepperNext class="btn">Proximo</button>
+    </div>
+  </form>

@@ -1,0 +1,16 @@
+<form [formGroup]="formulario_aprendizado_escolarizacao">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Alguma outra dificuldade cognitiva que o paciente apresenta?</mat-label>
+      <textarea matInput formControlName="habilidade_cognitiva"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Alguma habilidade especial que o pacinete apresenta:</mat-label>
+      <textarea matInput formControlName="habilidade_especial"></textarea>
+    </mat-form-field>
+
+    <div class="bottom-btn">
+      <button mat-button matStepperPrevious class="btn">Voltar</button>
+      <button mat-button (click)="goTonextStep4()" class="btn">IR PARA PARTE 4</button>
+    </div>
+</form>

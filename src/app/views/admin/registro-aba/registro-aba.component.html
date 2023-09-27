@@ -1,0 +1,83 @@
+<app-header></app-header>
+<div class="container">
+    <div class="content">
+        <div class="content-title">
+            <h1 class="title-registro">Registro ABA</h1>
+        </div>
+
+        <mat-stepper #stepper *ngIf=true>    
+            <mat-step >
+      
+              <form >
+                <ng-template matStepLabel>Paciente</ng-template>
+                
+                <mat-form-field appearance="fill" class="">
+                    <mat-label class="font">Paciente</mat-label>
+                    <mat-select>
+                    <mat-option *ngFor="let paciente of pacientes" [value]="paciente.value">
+                        {{paciente.viewValue}}
+                    </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+
+
+                <div style="text-align: right;">
+                  <button mat-button matStepperNext class="btn">Proximo</button>
+                </div>
+              </form>
+      
+            </mat-step>
+        
+            <mat-step >
+              <form  style="display: flex; flex-direction: column">
+                <ng-template matStepLabel>Programas</ng-template>
+
+                <mat-form-field appearance="fill" class="">
+                    <mat-label class="font">Programas</mat-label>
+                    <mat-select>
+                    <mat-option *ngFor="let programa of programas" [value]="programa.value">
+                        {{programa.viewValue}}
+                    </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+      
+                <div class="bottom-btn">
+                  <button mat-button matStepperPrevious class="btn">Voltar</button>
+                  <button mat-button matStepperNext class="btn">Proximo</button>
+                </div>
+              </form>
+      
+            </mat-step>
+
+            <mat-step >
+      
+              <form >
+                <ng-template matStepLabel>Registro de tentativas</ng-template>
+
+                <h4 class="title">Programas: "Escolhido"</h4>
+                <h4 class="title-tentativa">Tentativa "numero da tentativa":</h4>
+                <h4 class="title">Legenda:</h4>
+                <mat-form-field appearance="fill" class="">
+                    <mat-label class="font">Legendas</mat-label>
+                    <mat-select>
+                    <mat-option *ngFor="let legenda of legendas" [value]="legenda.value">
+                        {{legenda.viewValue}}
+                    </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                 <div class="bottom-btn">
+                  <button mat-button matStepperPrevious class="btn">Voltar</button>
+                  <button mat-button matStepperNext class="btn">Proximo</button>
+                </div>
+              </form>
+      
+            </mat-step>
+        </mat-stepper>
+
+    </div>
+</div>
+
+

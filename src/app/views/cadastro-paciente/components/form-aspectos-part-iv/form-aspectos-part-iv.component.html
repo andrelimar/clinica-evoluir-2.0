@@ -1,0 +1,78 @@
+<!-- Área: Outras dificuldades -->
+
+<section class="example-section" [formGroup]="formulario_aspectos">
+    <div class="content-area">
+
+      <div class="contents-aspectos" formGroupName="OD1">
+        <mat-checkbox class="example-margin" formControlName="aspecto42">
+          {{formulario_aspectos.get('OD1.nome')?.value}}</mat-checkbox>
+        <mat-form-field class="example-full-width" appearance="fill"
+          *ngIf="formulario_aspectos.get('OD1.aspecto42')?.value">
+          <mat-label>Descrição:</mat-label>
+          <textarea matInput formControlName="descricao"></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="contents-aspectos" formGroupName="OD2">
+        <mat-checkbox class="example-margin" formControlName="aspecto43">
+          {{formulario_aspectos.get('OD2.nome')?.value}}</mat-checkbox>
+        <mat-form-field class="example-full-width" appearance="fill"
+          *ngIf="formulario_aspectos.get('OD2.aspecto43')?.value">
+          <mat-label>Descrição:</mat-label>
+          <textarea matInput formControlName="descricao"></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="contents-aspectos" formGroupName="OD3">
+        <mat-checkbox class="example-margin" formControlName="aspecto44">
+          {{formulario_aspectos.get('OD3.nome')?.value}}</mat-checkbox>
+        <mat-form-field class="example-full-width" appearance="fill"
+          *ngIf="formulario_aspectos.get('OD3.aspecto44')?.value">
+          <mat-label>Descrição:</mat-label>
+          <textarea matInput formControlName="descricao"></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="contents-aspectos" formGroupName="OD4">
+        <mat-checkbox class="example-margin" formControlName="aspecto45">
+          {{formulario_aspectos.get('OD4.nome')?.value}}</mat-checkbox>
+        <mat-form-field class="example-full-width" appearance="fill"
+          *ngIf="formulario_aspectos.get('OD4.aspecto45')?.value">
+          <mat-label>Descrição:</mat-label>
+          <textarea matInput formControlName="descricao"></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="contents-aspectos" formGroupName="OD5">
+        <mat-checkbox class="example-margin" formControlName="aspecto46">
+          {{formulario_aspectos.get('OD5.nome')?.value}}</mat-checkbox>
+        <mat-form-field class="example-full-width" appearance="fill"
+          *ngIf="formulario_aspectos.get('OD5.aspecto46')?.value">
+          <mat-label>Descrição:</mat-label>
+          <textarea matInput formControlName="descricao"></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="contents-aspectos" formGroupName="OD6">
+        <mat-checkbox class="example-margin" formControlName="aspecto47">
+          {{formulario_aspectos.get('OD6.nome')?.value}}</mat-checkbox>
+        <mat-form-field class="example-full-width" appearance="fill"
+          *ngIf="formulario_aspectos.get('OD6.aspecto47')?.value">
+          <mat-label>Descrição:</mat-label>
+          <textarea matInput formControlName="descricao"></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="contents-aspectos" formGroupName="OD7">
+        <mat-checkbox class="example-margin" formControlName="aspecto48">
+          {{formulario_aspectos.get('OD7.nome')?.value}}</mat-checkbox>
+        <mat-form-field class="example-full-width" appearance="fill"
+          *ngIf="formulario_aspectos.get('OD7.aspecto48')?.value">
+          <mat-label>Descrição:</mat-label>
+          <textarea matInput formControlName="descricao"></textarea>
+        </mat-form-field>
+      </div>
+
+    </div>
+
+  </section>

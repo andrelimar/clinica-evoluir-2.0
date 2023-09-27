@@ -1,0 +1,32 @@
+<!-- Dados do Desenvolvimento -->
+
+<form style="display: flex; flex-direction: column" [formGroup]="formulario_antecedentes_pessoais" >
+    <div>
+      <mat-label>Antecendentes Pessoais</mat-label>
+    </div>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Concepção:</mat-label>
+      <textarea matInput formControlName="concepcao"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Gestação:</mat-label>
+      <textarea matInput formControlName="gestacao"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Parto:</mat-label>
+      <textarea matInput formControlName="parto"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Dados Neonatais:</mat-label>
+      <textarea matInput formControlName="dados_neonatais"></textarea>
+    </mat-form-field>
+
+    <div class="bottom-btn">
+      <button mat-button matStepperPrevious class="btn">Voltar</button>
+      <button mat-button matStepperNext class="btn">Proximo</button>
+    </div>
+  </form>

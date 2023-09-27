@@ -1,0 +1,27 @@
+<header class="container">
+    <div class="first-content">
+        <button mat-button [matMenuTriggerFor]="menu">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="item.action()" *ngFor="let item of itemsMenu">{{ item.title }}</button>
+        </mat-menu>
+        <div class="">
+           <a><button (click)="log_in()"><h1 class="title">Núcleo Evoluir</h1></button> </a>
+    </div>
+   </div>
+
+   <div class="second-content">
+    <div class="profile">
+
+        <button mat-button [matMenuTriggerFor]="menuprofile">
+            <mat-icon>person</mat-icon>
+        </button>
+        <mat-menu #menuprofile="matMenu">
+            <button mat-menu-item>Perfil</button>
+            <button mat-menu-item (click)="log_out()">Sair</button>
+        </mat-menu>
+    </div>
+   </div>
+</header>

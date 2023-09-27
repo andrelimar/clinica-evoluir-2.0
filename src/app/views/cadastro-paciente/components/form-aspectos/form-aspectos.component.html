@@ -1,0 +1,50 @@
+<!-- Área: Hábitos alimentares e de sono -->
+
+<section class="example-section" [formGroup]="formulario_aspectos" [style.width]="'100%'">
+
+    <div class="content-area">
+      <div class="contents-aspectos" formGroupName="HAS1">
+        <mat-checkbox class="example-margin" formControlName="aspecto1">
+          {{formulario_aspectos.get('HAS1.nome')?.value}}</mat-checkbox>
+
+        <mat-form-field class="example-full-width" appearance="fill"
+          *ngIf="formulario_aspectos.get('HAS1.aspecto1')?.value">
+          
+          <mat-label>Descrição:</mat-label>
+          <textarea matInput formControlName="descricao"></textarea>
+          
+        </mat-form-field>
+      </div>
+
+      <div class="contents-aspectos" formGroupName="HAS2">
+        <mat-checkbox class="example-margin" formControlName="aspecto2">
+          {{formulario_aspectos.get('HAS2.nome')?.value}}</mat-checkbox>
+        <mat-form-field class="example-full-width" appearance="fill"
+          *ngIf="formulario_aspectos.get('HAS2.aspecto2')?.value">
+          <mat-label>Descrição:</mat-label>
+          <textarea matInput formControlName="descricao"></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="contents-aspectos" formGroupName="HAS3">
+        <mat-checkbox class="example-margin" formControlName="aspecto3">
+          {{formulario_aspectos.get('HAS3.nome')?.value}}</mat-checkbox>
+        <mat-form-field class="example-full-width" appearance="fill"
+          *ngIf="formulario_aspectos.get('HAS3.aspecto3')?.value">
+          <mat-label>Descrição:</mat-label>
+          <textarea matInput formControlName="descricao"></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="contents-aspectos" formGroupName="HAS4">
+        <mat-checkbox class="example-margin" formControlName="aspecto4">
+          {{formulario_aspectos.get('HAS4.nome')?.value}}</mat-checkbox>
+        <mat-form-field class="example-full-width" appearance="fill"
+          *ngIf="formulario_aspectos.get('HAS4.aspecto4')?.value">
+          <mat-label>Descrição:</mat-label>
+          <textarea matInput formControlName="descricao"></textarea>
+        </mat-form-field>
+      </div>
+    </div>
+
+  </section>

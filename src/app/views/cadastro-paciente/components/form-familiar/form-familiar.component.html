@@ -1,0 +1,36 @@
+<!-- Dados Familiares -->
+
+<div [formGroup]="formulario_familiar">
+    <mat-form-field appearance="fill">
+      <mat-label>Nome do familiar:</mat-label>
+      <input matInput placeholder="" formControlName="nome" required>
+    </mat-form-field>
+
+    <div class="content-1">
+
+      <div class="componente-1-3">
+        <mat-form-field appearance="fill">
+          <mat-label>Parentesco:</mat-label>
+          <mat-select formControlName="tipo">
+            <mat-option *ngFor="let tipofamiliar of tiposfamiliares" [value]="tipofamiliar.value">
+              {{tipofamiliar.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="componente-1-3">
+        <mat-form-field appearance="fill">
+          <mat-label>Idade</mat-label>
+          <input matInput placeholder="" formControlName="idade" required>
+        </mat-form-field>
+      </div>
+
+      <div class="componente-1-3">
+        <mat-form-field appearance="fill">
+          <mat-label>Ocupação</mat-label>
+          <input matInput placeholder="" formControlName="ocupacao">
+        </mat-form-field>
+      </div>
+    </div>
+  </div>

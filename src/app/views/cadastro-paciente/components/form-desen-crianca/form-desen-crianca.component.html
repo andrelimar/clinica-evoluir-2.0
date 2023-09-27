@@ -1,0 +1,28 @@
+<!-- Dados do Desenvolvimento -->
+
+<form style="display: flex; flex-direction: column" [formGroup]="formulario_desenvolvimento_crianca">
+    <div>
+      <mat-label>Desenvolvimento da criança</mat-label>
+    </div>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Saúde:</mat-label>
+      <textarea matInput formControlName="saude"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Alimentação:</mat-label>
+      <textarea matInput formControlName="alimentacao"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Sono:</mat-label>
+      <textarea matInput formControlName="sono"></textarea>
+    </mat-form-field>
+
+    <div class="bottom-btn">
+      <button mat-button matStepperPrevious class="btn">Voltar</button>
+      <button mat-button (click)="submitForm()" class="btn">Salvar</button>
+    </div>
+
+  </form>

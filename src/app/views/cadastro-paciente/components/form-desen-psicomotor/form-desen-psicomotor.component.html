@@ -1,0 +1,49 @@
+<!-- Desenvolvimento Psicomotor -->
+
+<form [formGroup]="formulario_desenvolvimento_psicomotor">
+    <div>
+      <mat-label>Como era quando bebê?</mat-label>
+      <mat-label>Em que idade:</mat-label>
+    </div>
+    <div class="perguntas" formGroupName="P1">
+      <mat-form-field appearance="fill" >
+        <mat-label>{{formulario_desenvolvimento_psicomotor.get('P1.pergunta')?.value}}</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </div>
+    <div class="perguntas" formGroupName="P2">
+      <mat-form-field appearance="fill">
+        <mat-label>{{formulario_desenvolvimento_psicomotor.get('P2.pergunta')?.value}}</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </div>
+    <div class="perguntas" formGroupName="P3">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>{{formulario_desenvolvimento_psicomotor.get('P3.pergunta')?.value}}</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </div>
+    <div class="perguntas" formGroupName="P4">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>{{formulario_desenvolvimento_psicomotor.get('P4.pergunta')?.value}}</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </div>
+    <div class="perguntas" formGroupName="P5">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>{{formulario_desenvolvimento_psicomotor.get('P5.pergunta')?.value}}</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </div>
+    <div class="perguntas" formGroupName="P6">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>{{formulario_desenvolvimento_psicomotor.get('P6.pergunta')?.value}}</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </div>
+    
+
+    <div style="text-align: right">
+      <button mat-button matStepperNext class="btn">Proximo</button>
+    </div>
+  </form>

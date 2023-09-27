@@ -1,0 +1,124 @@
+
+.conteiner{
+    align-items: center;
+    justify-content: center;
+    display: block;
+    min-height: 100%;
+    overflow: auto;
+}
+
+.content{
+    justify-content: center;
+    align-items: center;
+    font-size: 14px!important;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.content-title{
+    display: flex;
+    text-align: center;
+    background-color: var(--color2);
+    align-items: center;
+    padding-left: 20px;
+}
+
+.title-subheader{
+    margin-top: 65px !important;
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    margin: 0;
+    padding: 17px 8px;
+    font-size: 20px
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 86.1vh;
+}
+.content-2{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.componente-2-2{
+    width: 48% !important;
+}
+
+
+.btn{
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 10px;
+    padding: 0px 50px;
+    background-color:var(--color2);
+    border: 2px solidvar(--color2);
+    cursor: pointer;
+    font-weight: bold;
+
+}
+.btn:hover{
+    background-color: #fff;
+    color: var(--color1);
+    border: 2px solid var(--color1);
+}
+.btn-adc{
+    margin-bottom: 10px;
+    background-color: var(--color3) !important;
+    border: 2px solid var(--color3);
+
+}
+.btn-adc:hover{
+    background-color: #fff !important;
+    color: var(--color4) !important;
+    border: 2px solid var(--color4) !important;
+
+}
+.bottom-btn{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+table{
+    width: 100%;
+}
+::ng-deep .mat-form-field{
+    width: 100%;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex{
+    background-color: #fff;
+    border-bottom: 3px solid var(--color3);
+    padding: 2px 2px 0 2px !important;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex:focus{
+
+    border-bottom: 2px solid var(--color3) !important;
+
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-infix{
+    padding: .25em 0 2px 0;
+}
+::ng-deep .mat-select-arrow{
+    color:var(--color2);
+}
+::ng-deep .mat-icon-button{
+    color:var(--color2);
+}
+::ng-deep .mat-stepper-vertical, .mat-stepper-horizontal{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+::ng-deep .mat-horizontal-stepper-wrapper {
+
+    width: 70%
+
+}

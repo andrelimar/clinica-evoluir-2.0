@@ -1,0 +1,28 @@
+<!-- Aprendizagens e Escolarização -->
+
+<form [formGroup]="formulario_aprendizado_escolarizacao">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Aprendizagens</mat-label>
+      <textarea matInput formControlName="aprendizagens"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Historico Escolar</mat-label>
+      <textarea matInput formControlName="historia_escolar"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Desempenho nas disciplinas</mat-label>
+      <textarea matInput formControlName="desempenho_disciplinas"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Vínculo com a escola</mat-label>
+      <textarea matInput formControlName="vinculo_escola"></textarea>
+    </mat-form-field>
+
+    <div class="bottom-btn">
+      <button mat-button (click)="previousStep2()" class="btn">Voltar</button>
+      <button mat-button matStepperNext class="btn">Proximo</button>
+    </div>
+  </form>

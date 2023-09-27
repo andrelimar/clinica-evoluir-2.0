@@ -1,0 +1,23 @@
+<form class="content-2" [formGroup]="formulario_programas_paciente">
+    <div class="componente-2-2">
+        <mat-form-field appearance="fill" class="">
+            <mat-label class="font">Programas</mat-label>
+            <mat-select formControlName="programa">
+            <mat-option *ngFor="let programa of programas" [value]="programa.value">
+                {{programa.viewValue}}
+            </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+    </div>
+    <div class="componente-2-2">
+      <mat-form-field appearance="fill">
+        <mat-label>Numero de tentativas</mat-label>
+        <mat-select formControlName="numero_de_tentativas">
+          <mat-option *ngFor="let topping of numbers" [value]="topping">{{
+            topping
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+</form>

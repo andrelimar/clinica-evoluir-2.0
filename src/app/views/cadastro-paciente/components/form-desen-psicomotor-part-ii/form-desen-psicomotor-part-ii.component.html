@@ -1,0 +1,51 @@
+<!-- Desenvolvimento Psicomotor -->
+
+<form [formGroup]="formulario_desenvolvimento_psicomotor" >
+
+    <div class="perguntas" formGroupName="P7">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>{{formulario_desenvolvimento_psicomotor.get('P7.pergunta')?.value}}</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="perguntas" formGroupName="P8">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>{{formulario_desenvolvimento_psicomotor.get('P8.pergunta')?.value}}</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="perguntas" formGroupName="P9">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>{{formulario_desenvolvimento_psicomotor.get('P9.pergunta')?.value}}</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="perguntas" formGroupName="P10">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>{{formulario_desenvolvimento_psicomotor.get('P10.pergunta')?.value}}</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="perguntas" formGroupName="P11">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>{{formulario_desenvolvimento_psicomotor.get('P11.pergunta')?.value}}</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="perguntas" formGroupName="P12">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>{{formulario_desenvolvimento_psicomotor.get('P12.pergunta')?.value}}</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="bottom-btn">
+      <button mat-button matStepperPrevious class="btn">Voltar</button>
+      <button mat-button matStepperNext class="btn">Proximo</button>
+    </div>
+  </form>

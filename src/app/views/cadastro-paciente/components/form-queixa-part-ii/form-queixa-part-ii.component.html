@@ -1,0 +1,12 @@
+<div>
+    <mat-label>Medicações Atuais</mat-label>
+  </div>
+
+<div [formGroup]="formulario_queixa">
+
+    <mat-form-field appearance="fill" [formGroup]="formulario_queixa">
+      <mat-label>Medicação prescrita por:</mat-label>
+      <input matInput placeholder="" formControlName="medicacao_prescrita_por" required>
+    </mat-form-field>
+
+  </div>

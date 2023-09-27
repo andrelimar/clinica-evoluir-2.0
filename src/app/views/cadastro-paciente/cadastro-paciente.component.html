@@ -1,0 +1,257 @@
+<app-header></app-header>
+
+<div class="conteiner">
+  <div class="content">
+    <div class="content-title">
+      <h1 class="title-subheader">Cadastro de paciente</h1>
+    </div>
+
+    <mat-stepper #stepper *ngIf="parte1" class="IDENTIFICAÇÃO">
+      <mat-step>
+        <ng-template matStepLabel>Dados Pessoais</ng-template>
+        <app-form-paciente [formulario_paciente]="formulario_paciente"></app-form-paciente>
+      </mat-step>
+
+      <mat-step>
+        <div style="display: flex; flex-direction: column">
+          <ng-template matStepLabel>Dados Familiares</ng-template>
+          <app-form-familiar [formulario_familiar]="formulario_familiar"></app-form-familiar>
+
+          <div style="text-align: right">
+            <button mat-button class="btn btn-adc" (click)="adc_familiar()" type="button">Adicionar</button>
+          </div>
+
+          <app-tabela-familiares #table [style.width]="'100%'"></app-tabela-familiares>
+
+          <app-form-paciente-part-ii [formulario_paciente]="formulario_paciente"></app-form-paciente-part-ii>
+
+          <div class="bottom-btn">
+            <button mat-button matStepperPrevious class="btn">Voltar</button>
+            <button mat-button (click)="nextStep2()" class="btn">IR PARA PARTE 2</button>
+          </div>
+        </div>
+      </mat-step>
+
+    </mat-stepper>
+
+    <mat-stepper #stepper *ngIf="parte2" class="DADOS DA QUEIXA">
+      <mat-step>
+        <ng-template matStepLabel>Dados da Queixa - 1</ng-template>
+        <app-form-queixa (nextSetp)="previousStep1($event)" [formulario_queixa]="formulario_queixa"></app-form-queixa>
+      </mat-step>
+
+      <mat-step>
+        <div style="display: flex; flex-direction: column">
+          <ng-template matStepLabel>Dados da Queixa - 2</ng-template>
+          <app-form-queixa-part-ii [formulario_queixa]="formulario_queixa"></app-form-queixa-part-ii>
+          <app-form-medicamentos [formulario_medicamento]="formulario_medicamento"></app-form-medicamentos>
+          <div style="text-align: right;">
+            <button mat-button class="btn btn-adc" (click)="adc_medicamento()" type="button">Adicionar</button>
+          </div>
+
+          <table mat-table [dataSource]="dataSource1" class="mat-elevation-z8" style="margin-bottom:1.34375em">
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> No. </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="nome">
+              <th mat-header-cell *matHeaderCellDef> Nome </th>
+              <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="finalidade">
+              <th mat-header-cell *matHeaderCellDef> Finalidade </th>
+              <td mat-cell *matCellDef="let element"> {{element.finalidade}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="dosagem">
+              <th mat-header-cell *matHeaderCellDef> Dosagem </th>
+              <td mat-cell *matCellDef="let element"> {{element.dosagem}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="horario">
+              <th mat-header-cell *matHeaderCellDef> Horario </th>
+              <td mat-cell *matCellDef="let element"> {{element.horario}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="data_inicio">
+              <th mat-header-cell *matHeaderCellDef> Data de Inicio </th>
+              <td mat-cell *matCellDef="let element"> {{element.data_inicio}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="delete">
+              <th mat-header-cell *matHeaderCellDef></th>
+              <td mat-cell *matCellDef="let element">
+                <mat-icon (click)="delete1(element.position)" style="color: rgb(128, 128, 128)">delete</mat-icon>
+              </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns1;"></tr>
+          </table>
+
+          <div class="bottom-btn">
+            <button mat-button matStepperPrevious class="btn">Voltar</button>
+            <button mat-button matStepperNext class="btn">Proximo</button>
+          </div>
+        </div>
+
+      </mat-step>
+
+      <mat-step>
+        <ng-template matStepLabel>Dados da Queixa - 3</ng-template>
+        <app-form-queixa-part-iii [formulario_queixa]="formulario_queixa"></app-form-queixa-part-iii>
+      </mat-step>
+
+      <mat-step>
+        <ng-template matStepLabel>Dados da Queixa - 4</ng-template>
+        <div style="display: flex; flex-direction: column">
+          <div style="text-align: center;">
+            <mat-label> Hábitos alimentares e de sono</mat-label>
+          </div>
+
+          <div class="subparte1">
+            <mat-stepper orientation="vertical" #stepper *ngIf="subparte1">
+              <mat-step>
+                <div>
+                  <ng-template matStepLabel>Área: Hábitos alimentares e de sono</ng-template>
+                  <app-form-aspectos [formulario_aspectos]="formulario_aspectos"></app-form-aspectos>
+                  <div style="text-align: right">
+                    <button mat-button matStepperNext class="btn btn-adc">Proximo</button>
+                  </div>
+                </div>
+              </mat-step>
+
+              <mat-step>
+                <div>
+                  <ng-template matStepLabel>Área: Desenvolvimento Social</ng-template>
+                  <app-form-aspectos-part-ii [formulario_aspectos]="formulario_aspectos"></app-form-aspectos-part-ii>
+                  <div class="bottom-btn">
+                    <button mat-button matStepperPrevious class="btn btn-adc">Voltar</button>
+                    <button mat-button matStepperNext class="btn btn-adc">Proximo</button>
+                  </div>
+                </div>
+              </mat-step>
+
+              <mat-step>
+                <div>
+                  <ng-template matStepLabel>Área: Comportamento</ng-template>
+                  <app-form-aspectos-part-iii [formulario_aspectos]="formulario_aspectos"></app-form-aspectos-part-iii>
+                  <div class="bottom-btn">
+                    <button mat-button matStepperPrevious class="btn btn-adc">Voltar</button>
+                    <button mat-button matStepperNext class="btn btn-adc">Proximo</button>
+                  </div>
+                </div>
+              </mat-step>
+
+              <mat-step>
+                <div>
+                  <ng-template matStepLabel>Área: Outras dificuldades</ng-template>
+                  <app-form-aspectos-part-iv [formulario_aspectos]="formulario_aspectos"></app-form-aspectos-part-iv>
+                  <div class="bottom-btn">
+                    <button mat-button matStepperPrevious class="btn btn-adc">Voltar</button>
+                    <button mat-button matStepperNext class="btn btn-adc">Proximo</button>
+                  </div>
+                </div>
+              </mat-step>
+
+              <mat-step>
+                <div>
+                  <ng-template matStepLabel>Área: Habilidades Motoras</ng-template>
+                  <app-form-aspectos-part-v [formulario_aspectos]="formulario_aspectos"></app-form-aspectos-part-v>
+                  <div style="text-align: left">
+                    <button mat-button matStepperPrevious class="btn btn-adc">Voltar</button>
+                  </div>
+                </div>
+              </mat-step>
+
+            </mat-stepper>
+          </div>
+          <div class="bottom-btn">
+            <button mat-button matStepperPrevious class="btn">Voltar</button>
+            <button mat-button (click)="nextStep3()" class="btn">IR PARA PARTE 3</button>
+          </div>
+        </div>
+      </mat-step>
+
+    </mat-stepper>
+
+    <mat-stepper #stepper *ngIf="parte3" class="INFORMAÇÕES SOBRE APRENDIZAGEM E ESCOLARIZAÇÃO">
+      <mat-step>
+        <ng-template matStepLabel>Aprendizagens e Escolarização</ng-template>
+        <!-- quando estiver entre () é um output do component -->
+        <!-- quando estiver entre [] é um input do component -->
+        <app-form-aprendizado-escolarizacao (nextSetp)="previousStep2()"
+          [formulario_aprendizado_escolarizacao]="formulario_aprendizado_escolarizacao">
+        </app-form-aprendizado-escolarizacao>
+      </mat-step>
+
+      <mat-step>
+        <ng-template matStepLabel>Aprendizagens e Escolarização</ng-template>
+        <app-form-habilidade-cognitiva [formulario_habilidade_cognitiva]="formulario_habilidade_cognitiva">
+        </app-form-habilidade-cognitiva>
+      </mat-step>
+
+      <mat-step>
+        <ng-template matStepLabel>Aprendizagens e Escolarização</ng-template>
+        <app-form-dificuldade-especifica [formulario_dificuldade_especifica]="formulario_dificuldade_especifica">
+        </app-form-dificuldade-especifica>
+      </mat-step>
+
+      <mat-step>
+        <ng-template matStepLabel>Aprendizagens e Escolarização</ng-template>
+        <app-form-aprendizado-escolarizacao-part-ii (nextStep4)="nextStep4()"
+          [formulario_aprendizado_escolarizacao]="formulario_aprendizado_escolarizacao">
+        </app-form-aprendizado-escolarizacao-part-ii>
+      </mat-step>
+    </mat-stepper>
+
+    <mat-stepper #stepper *ngIf="parte4" class="DADOS DO DESENVOLVIMENTO">
+      <mat-step>
+        <div style="display: flex; flex-direction: column">
+          <div class="subparte1">
+            <mat-stepper orientation="vertical" #stepper *ngIf="subparte1">
+              <mat-step>
+                <ng-template matStepLabel>Desenvolvimento Psicomotor</ng-template>
+                <app-form-desen-psicomotor [style.width]="'100%'"
+                  [formulario_desenvolvimento_psicomotor]="formulario_desenvolvimento_psicomotor">
+                </app-form-desen-psicomotor>
+              </mat-step>
+
+              <mat-step>
+                <ng-template matStepLabel>Desenvolvimento Psicomotor</ng-template>
+                <app-form-desen-psicomotor-part-ii
+                  [formulario_desenvolvimento_psicomotor]="formulario_desenvolvimento_psicomotor">
+                </app-form-desen-psicomotor-part-ii>
+              </mat-step>
+
+              <mat-step>
+                <ng-template matStepLabel>Desenvolvimento Psicomotor</ng-template>
+                <app-form-desen-psicomotor-part-iii
+                  [formulario_desenvolvimento_psicomotor]="formulario_desenvolvimento_psicomotor">
+                </app-form-desen-psicomotor-part-iii>
+              </mat-step>
+            </mat-stepper>
+          </div>
+
+          <div class="bottom-btn">
+            <button mat-button (click)="previousStep3()" class="btn">Voltar</button>
+            <button mat-button matStepperNext class="btn">Proximo</button>
+          </div>
+        </div>
+      </mat-step>
+
+      <mat-step>
+        <ng-template matStepLabel>Dados do Desenvolvimento</ng-template>
+        <app-form-antecedentes-pessoais [formulario_antecedentes_pessoais]="formulario_antecedentes_pessoais">
+        </app-form-antecedentes-pessoais>
+      </mat-step>
+
+      <mat-step>
+        <ng-template matStepLabel>Dados do Desenvolvimento</ng-template>
+        <app-form-desen-crianca (save)="save()"
+          [formulario_desenvolvimento_crianca]="formulario_desenvolvimento_crianca"></app-form-desen-crianca>
+      </mat-step>
+    </mat-stepper>
+  </div>
+</div>

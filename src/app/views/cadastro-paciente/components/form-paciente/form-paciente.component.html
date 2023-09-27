@@ -1,0 +1,77 @@
+<form [formGroup]="formulario_paciente">
+    <mat-form-field appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input matInput placeholder="" formControlName="nome_paciente" required>
+    </mat-form-field>
+
+    <div class="content-1">
+      <div class="componente-1-3">
+        <mat-form-field appearance="fill">
+          <mat-label>Data de nascimento</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="data_nascimento">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div class="componente-1-3">
+        <mat-form-field appearance="fill">
+          <mat-label>Idade</mat-label>
+          <input matInput placeholder="" formControlName="idade" required>
+        </mat-form-field>
+      </div>
+
+      <div class="componente-1-3">
+        <mat-form-field appearance="fill">
+          <mat-label>Sexo</mat-label>
+          <mat-select formControlName="sexo">
+            <mat-option *ngFor="let sexo of sexos" [value]="sexo.value">
+              {{sexo.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="componente-1-3">
+      <mat-form-field appearance="fill">
+        <mat-label>Naturalidade</mat-label>
+        <input matInput placeholder="" formControlName="naturalidade" required>
+      </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Endereço</mat-label>
+      <input matInput placeholder="" formControlName="endereco" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="" formControlName="email" required>
+    </mat-form-field>
+
+    <div class="content-1">
+      <div class="componente-1-2">
+        <mat-form-field appearance="fill">
+          <mat-label>Escola</mat-label>
+          <input matInput placeholder="" formControlName="escola" required>
+        </mat-form-field>
+      </div>
+
+      <div class="componente-1-2">
+        <mat-form-field appearance="fill">
+          <mat-label>Serie</mat-label>
+          <input matInput placeholder="" formControlName="serie" required>
+        </mat-form-field>
+      </div>
+    </div>
+    <mat-form-field appearance="fill">
+      <mat-label>Contato da escola</mat-label>
+      <input matInput placeholder="" formControlName="contato_escola" required>
+    </mat-form-field>
+
+    <div style="text-align: right">
+      <button mat-button matStepperNext class="btn">Proximo</button>
+    </div>
+</form>

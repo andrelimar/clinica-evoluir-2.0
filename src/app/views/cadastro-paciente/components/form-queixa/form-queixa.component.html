@@ -1,0 +1,26 @@
+<form [formGroup]="formulario_queixa">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Encaminhamento</mat-label>
+      <textarea matInput formControlName="encaminhamento"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Queixa Principal</mat-label>
+      <textarea matInput formControlName="queixa_principal"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Historia da Preocupação Atual</mat-label>
+      <textarea matInput formControlName="historia_preocupacao_atual"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Grau de Prejuízo</mat-label>
+      <textarea matInput formControlName="grau_prejuizo"></textarea>
+    </mat-form-field>
+
+    <div class="bottom-btn">
+      <button mat-button (click)="previousStep1()" class="btn">Voltar</button>
+      <button mat-button  matStepperNext class="btn">Proximo</button>
+    </div>
+  </form>

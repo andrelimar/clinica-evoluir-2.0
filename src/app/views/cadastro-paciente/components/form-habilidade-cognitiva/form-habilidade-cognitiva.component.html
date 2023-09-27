@@ -1,0 +1,235 @@
+<!-- Aprendizagens e Escolarização -->
+
+<form style="display: flex; flex-direction: column" [formGroup]="formulario_habilidade_cognitiva">
+
+    <div>
+        <mat-label>Habilidades cognitivas</mat-label>
+    </div>
+
+    <div class="hab">
+        <div class="cols">
+            <div class="col-1">
+                <div class="line col-branco" style="height: 34px;">
+                    <mat-label _ngcontent-cbd-c177=""></mat-label>
+                </div>
+                <div class="line">
+                    <mat-label _ngcontent-cbd-c177="">{{formulario_habilidade_cognitiva.get('HC1.nome')?.value}}
+                    </mat-label>
+                </div>
+                <div class="line">
+                    <mat-label _ngcontent-cbd-c177="">{{formulario_habilidade_cognitiva.get('HC2.nome')?.value}}
+                    </mat-label>
+                </div>
+                <div class="line">
+                    <mat-label _ngcontent-cbd-c177="">{{formulario_habilidade_cognitiva.get('HC3.nome')?.value}}
+                    </mat-label>
+                </div>
+                <div class="line">
+                    <mat-label _ngcontent-cbd-c177="">{{formulario_habilidade_cognitiva.get('HC4.nome')?.value}}
+                    </mat-label>
+                </div>
+                <div class="line">
+                    <mat-label _ngcontent-cbd-c177="">{{formulario_habilidade_cognitiva.get('HC5.nome')?.value}}
+                    </mat-label>
+                </div>
+                <div class="line">
+                    <mat-label _ngcontent-cbd-c177="">{{formulario_habilidade_cognitiva.get('HC6.nome')?.value}}
+                    </mat-label>
+                </div>
+                <div class="line">
+                    <mat-label _ngcontent-cbd-c177="">{{formulario_habilidade_cognitiva.get('HC7.nome')?.value}}
+                    </mat-label>
+                </div>
+                <div class="line">
+                    <mat-label _ngcontent-cbd-c177="">{{formulario_habilidade_cognitiva.get('HC8.nome')?.value}}
+                    </mat-label>
+                </div>
+                <div class="line">
+                    <mat-label _ngcontent-cbd-c177="">{{formulario_habilidade_cognitiva.get('HC9.nome')?.value}}
+                    </mat-label>
+                </div>
+
+
+            </div>
+            <div class="col-2">
+                <div class="lines">
+                    <div class="col">
+                        <mat-label _ngcontent-cbd-c177="">Acima da média</mat-label>
+                    </div>
+                    <div class="col">
+                        <mat-label _ngcontent-cbd-c177="">Na média</mat-label>
+                    </div>
+                    <div class="col">
+                        <mat-label _ngcontent-cbd-c177="">Abaixo da média</mat-label>
+                    </div>
+                    <div class="col">
+                        <mat-label _ngcontent-cbd-c177="">Dificuldades severas</mat-label>
+                    </div>
+                </div>
+
+                <div class="contents-aspectos" formGroupName="HC1">
+                    <mat-radio-group aria-label="Select an option">
+                        <div class="lines">
+                            <div class="col">
+                                <mat-radio-button value="ACM"></mat-radio-button>
+                            </div>
+                            <div class="col">
+                                <mat-radio-button value="NM"></mat-radio-button>
+                            </div>
+                            <div class="col">
+                                <mat-radio-button value="ABM"></mat-radio-button>
+                            </div>
+                            <div class="col">
+                                <mat-radio-button value="DS"></mat-radio-button>
+                            </div>
+                        </div>
+                    </mat-radio-group>
+                </div>
+
+                <mat-radio-group aria-label="Select an option">
+                    <div class="lines">
+                        <div class="col">
+                            <mat-radio-button value="opcion1"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion2"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion3"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion4"></mat-radio-button>
+                        </div>
+                    </div>
+                </mat-radio-group>
+
+                <mat-radio-group aria-label="Select an option">
+                    <div class="lines">
+                        <div class="col">
+                            <mat-radio-button value="opcion1"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion2"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion3"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion4"></mat-radio-button>
+                        </div>
+                    </div>
+                </mat-radio-group>
+
+                <mat-radio-group aria-label="Select an option">
+                    <div class="lines">
+                        <div class="col">
+                            <mat-radio-button value="opcion1"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion2"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion3"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion4"></mat-radio-button>
+                        </div>
+                    </div>
+                </mat-radio-group>
+
+                <mat-radio-group aria-label="Select an option">
+                    <div class="lines">
+                        <div class="col">
+                            <mat-radio-button value="opcion1"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion2"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion3"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion4"></mat-radio-button>
+                        </div>
+                    </div>
+                </mat-radio-group>
+
+                <mat-radio-group aria-label="Select an option">
+                    <div class="lines">
+                        <div class="col">
+                            <mat-radio-button value="opcion1"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion2"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion3"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion4"></mat-radio-button>
+                        </div>
+                    </div>
+                </mat-radio-group>
+
+                <mat-radio-group aria-label="Select an option">
+                    <div class="lines">
+                        <div class="col">
+                            <mat-radio-button value="opcion1"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion2"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion3"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion4"></mat-radio-button>
+                        </div>
+                    </div>
+                </mat-radio-group>
+
+                <mat-radio-group aria-label="Select an option">
+                    <div class="lines">
+                        <div class="col">
+                            <mat-radio-button value="opcion1"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion2"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion3"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion4"></mat-radio-button>
+                        </div>
+                    </div>
+                </mat-radio-group>
+
+                <mat-radio-group aria-label="Select an option">
+                    <div class="lines">
+                        <div class="col">
+                            <mat-radio-button value="opcion1"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion2"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion3"></mat-radio-button>
+                        </div>
+                        <div class="col">
+                            <mat-radio-button value="opcion4"></mat-radio-button>
+                        </div>
+                    </div>
+                </mat-radio-group>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bottom-btn">
+        <button mat-button matStepperPrevious class="btn">Voltar</button>
+        <button mat-button matStepperNext class="btn">Proximo</button>
+    </div>
+
+</form>
