@@ -11,7 +11,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from 'src/app/components/header/header.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'agendamento', component: AgendamentoComponent },
   { path: 'registro-aba', component: RegistroAbaComponent },
   {

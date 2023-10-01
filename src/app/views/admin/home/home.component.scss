@@ -8,7 +8,6 @@ body{
     background-color: #fff;
 }
 .content{
-    height: 520px;
     width: 935px;
     border-radius: 20px;
     overflow: hidden;
@@ -43,6 +42,7 @@ input{
     display: flex;
     width: 400%;
     height: 100%;
+    max-width: 400%;
 }
 .slide{
     width: 25%;

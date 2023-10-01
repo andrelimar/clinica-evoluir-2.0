@@ -1,53 +1,60 @@
 <app-header></app-header>
 <div class="container">
-    <div class="content">
-        <div class="content-title">
-            <h1 class="title-agendamento"> Agendamento de paciente</h1>
-        </div>
-
-            <form >
-            
-                <mat-form-field appearance="fill">
-                    <mat-label>Solicitante</mat-label>
-                    <input matInput placeholder="" formControlOcupacao="" required>
-                  </mat-form-field>
-
-                <mat-form-field appearance="fill" class="">
-                    <mat-label class="font">Nome terapeuta</mat-label>
-                    <mat-select>
-                    <mat-option *ngFor="let terapeuta of terapeutas" [value]="terapeuta.value">
-                        {{terapeuta.viewValue}}
-                    </mat-option>
-                    </mat-select>
-                </mat-form-field>
-
-                <mat-form-field appearance="fill" class="example-full-width">
-                    <mat-label>Data Agendamento</mat-label>
-                    <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker">
-                    <mat-datepicker-toggle matSuffix [for]="picker" class="color"></mat-datepicker-toggle>
-                    <mat-datepicker #picker class=""></mat-datepicker>
-                </mat-form-field>
-
-                <mat-form-field class="example-full-width" appearance="fill">
-                    <mat-label>Horario Agendamento</mat-label>
-                    <mat-select>
-                        <mat-option *ngFor="let horario of horarios" [value]="horario.value">
-                            {{horario.viewValue}}
-                        </mat-option>
-                        </mat-select>
-                </mat-form-field>
-
-
-                <mat-form-field class="example-full-width" appearance="fill">
-                    <mat-label>Descrição</mat-label>
-                    <textarea matInput ></textarea>
-                </mat-form-field>
-                <div style="text-align: right">
-                    <button class="btn" mat-raised-button >Salvar Agendamento</button>
-                </div>
-
-                </form>
-
-            
-        </div>
+  <div class="content">
+    <div class="content-title">
+      <h1 class="title-subheader">Agendamento</h1>
     </div>
+
+  <div class="formulario">
+      <form >
+
+          <mat-form-field appearance="fill">
+              <mat-label>Solicitante</mat-label>
+              <input matInput placeholder="" formControlOcupacao="" required>
+            </mat-form-field>
+
+          <mat-form-field appearance="fill" class="">
+              <mat-label class="font">Nome terapeuta</mat-label>
+              <mat-select>
+              <mat-option *ngFor="let terapeuta of terapeutas" [value]="terapeuta.value">
+                  {{terapeuta.viewValue}}
+              </mat-option>
+              </mat-select>
+          </mat-form-field>
+
+        <div class="content-1">
+          <mat-form-field appearance="fill" class="example-full-width componente-1-2">
+              <mat-label>Data Agendamento</mat-label>
+              <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker">
+              <mat-datepicker-toggle matSuffix [for]="picker" class="color"></mat-datepicker-toggle>
+              <mat-datepicker #picker class=""></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width componente-1-2" appearance="fill">
+              <mat-label>Horario Agendamento</mat-label>
+              <mat-select>
+                  <mat-option *ngFor="let horario of horarios" [value]="horario.value">
+                      {{horario.viewValue}}
+                  </mat-option>
+                  </mat-select>
+          </mat-form-field>
+        </div>
+
+
+
+          <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Descrição</mat-label>
+              <textarea matInput ></textarea>
+          </mat-form-field>
+          <div style="text-align: right; width: 100%;" >
+            <button mat-button class="btn">Salvar Agendamento</button>
+          </div>
+
+          </form>
+
+        </div>
+  </div>
+
+
+  </div>
+

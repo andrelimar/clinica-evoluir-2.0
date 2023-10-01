@@ -1,6 +1,7 @@
-<form [formGroup]="formulario_programas_paciente">
-                
-    <mat-form-field appearance="fill" class="">
+<form [formGroup]="formulario_programas_paciente" style="  flex-direction: column;
+">
+  <div class="content-1">
+    <mat-form-field appearance="fill" >
         <mat-label class="font">Paciente</mat-label>
         <mat-select formControlName="nome_paciente">
         <mat-option *ngFor="let paciente of pacientes" [value]="paciente.value">
@@ -8,7 +9,7 @@
         </mat-option>
         </mat-select>
     </mat-form-field>
-
+</div>
 
     <div style="text-align: right;">
       <button mat-button matStepperNext class="btn">Proximo</button>

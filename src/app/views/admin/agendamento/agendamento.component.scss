@@ -7,56 +7,53 @@
     color: var(--color3);
 }
 
-.container{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    height: 90vh;
-    display: flex;
-    background-color: #ecf0f1;
+.conteiner{
+  align-items: center;
+  justify-content: center;
+  display: block;
+  min-height: 100%;
+  overflow: auto;
 }
 
 .content{
-    width: 70%;
-    height: 90vh;
-    border: 1px solid var(--color2);
-    margin-top: 2%;
-    background-color: #fff;
-}
-
-.title{
-    margin: 2% 0;
-    margin-top: 30px;
-    text-align: left !important;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px!important;
+  height: 100vh;
+  background-color: #fff;
 }
 
 .content-title{
-    height: 27px;
-    background-color: var(--color2);
-    align-items: center;
+  display: flex;
+  text-align: center;
+  background-color: var(--color2);
+  align-items: center;
+  padding-left: 20px;
 }
 
-.title-agendamento{
-    margin: 0;
-    font-size: 20px;
-    color: #fff;
-    text-align: center;
+.title-subheader{
+  margin-top: 65px !important;
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+  margin: 0;
+  padding: 17px 8px;
+  font-size: 20px
+}
+
+.formulario{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 form{
     padding: 24px 24px 0px 24px !important;
-
-}
-
-.content-1{
+    width: 70%;
     display: flex;
-    width: 100%;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-}
 
-.componente-1-2{
-    width: 48% !important;
 }
 
 .input{
@@ -71,40 +68,43 @@ form{
 .input:hover{
     border-bottom: 2px solid black;
 }
+.content-1{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.componente-1-2{
+  width: 48% !important;
+}
 
 .btn{
     border-radius: 15px;
     text-transform: uppercase;
-    color: #fff;
+    color: #fff !important;
     font-size: 10px;
     padding: 0px 50px;
-    background-color: var(--color2);
+    background-color: var(--color2) !important;
     border: 2px solid var(--color2);
     cursor: pointer;
     font-weight: bold;
+    margin-bottom: 10px;
+
 }
 
 .btn:hover{
-    background-color: #fff;
-    color: var(--color1);
-    border: 2px solid var(--color1);
+  background-color: #fff !important;
+  color: var(--color1) !important;
+  border: 2px solid var(--color1) !important;
 }
 
-.btn-adc{
-    margin-bottom: 10px;
-    background-color: var(--color3) !important;
-    border: 2px solid var(--color3);
-}
-
-.btn-adc:hover{
-    background-color: #fff !important;
-    color: var(--color4) !important;
-    border: 2px solid var(--color4) !important;
-
-}
 ::ng-deep .mat-form-field{
     width: 100%;
 }
+::ng-deep .mat-mdc-form-field{
+  width: 100%;
+}
+
 ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex{
     background-color: #fff;
     border-bottom: 3px solid var(--color3);

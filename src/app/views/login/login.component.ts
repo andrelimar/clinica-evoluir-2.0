@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {MatIconModule} from '@angular/material/icon';
 
 
 @Component({
@@ -16,8 +15,10 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  log_out(){
+    this.rotas.navigate([''])
+  }
   log_in(){
-    this.rotas.navigateByUrl('admin/home');
+    this.rotas.navigate(['admin/home'])
   }
 }
