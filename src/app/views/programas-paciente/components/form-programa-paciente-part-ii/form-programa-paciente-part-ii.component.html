@@ -1,7 +1,7 @@
 <form [formGroup]="formulario_programas_paciente" style="  flex-direction: column;
 ">
   <div class="content-1">
-    <mat-form-field appearance="fill" >
+    <mat-form-field appearance="fill" style="width: 100%;">
         <mat-label class="font">Paciente</mat-label>
         <mat-select formControlName="nome_paciente">
         <mat-option *ngFor="let paciente of pacientes" [value]="paciente.value">

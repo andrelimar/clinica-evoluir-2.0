@@ -33,7 +33,7 @@
     font-size: 20px
 }
 form{
-  padding: 24px 24px 0px 24px !important;
+  padding: 24px 0px 0px 24px !important;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -69,7 +69,7 @@ form{
 .btn{
     border-radius: 15px;
     text-transform: uppercase;
-    color: #fff;
+    color: #fff !important;
     font-size: 10px;
     padding: 0px 50px;
     background-color:var(--color2);
