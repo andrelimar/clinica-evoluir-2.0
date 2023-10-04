@@ -244,3 +244,9 @@ table{
     width: 100%;
 }
 
+::ng-deep .mat-icon-button{
+  color: var(--color2) !important;
+}
+::ng-deep .mat-select-arrow{
+  color: var(--color2);
+}
