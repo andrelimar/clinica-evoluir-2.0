@@ -1,4 +1,6 @@
-
+.color{
+  color: var(--blue1);
+}
 
 .conteiner{
     align-items: center;
@@ -19,7 +21,7 @@
 .content-title{
     display: flex;
     text-align: center;
-    background-color: var(--color2);
+    background-color: var(--orange2);
     align-items: center;
     padding-left: 20px;
 }
@@ -74,7 +76,7 @@
     border: 0;
     background-color: #fff;
     align-items: center;
-    border-bottom: 2px solid var(--color3);
+    border-bottom: 2px solid var(--blue1);
 }
 
 .input:hover{
@@ -84,31 +86,31 @@
 .btn{
     border-radius: 15px;
     text-transform: uppercase;
-    color: #fff;
+    color: #fff !important;
     font-size: 10px;
     padding: 0px 50px;
-    background-color: var(--color2);
-    border: 2px solid var(--color2);
+    background-color: var(--orange2);
+    border: 2px solid var(--orange2);
     cursor: pointer;
     font-weight: bold;
 }
 
 .btn:hover{
     background-color: #fff;
-    color: var(--color1);
-    border: 2px solid var(--color1);
+    color: var(--orange1)!important;
+    border: 2px solid var(--orange1);
 }
 
 .btn-adc{
     margin-bottom: 10px;
-    background-color: var(--color3) !important;
-    border: 2px solid var(--color3);
+    background-color: var(--blue1) !important;
+    border: 2px solid var(--blue1);
 }
 
 .btn-adc:hover{
     background-color: #fff !important;
-    color: var(--color4) !important;
-    border: 2px solid var(--color4) !important;
+    color: var(--blue2) !important;
+    border: 2px solid var(--blue2) !important;
 }
 
 .bottom-btn{
@@ -142,7 +144,7 @@
 }
 
 .col{
-    border:1px solid var(--color3);
+    border:1px solid var(--blue1);
     border-top: 0 !important;
     border-right: 0 !important;
     padding: 8px 0 8px 0;
@@ -152,7 +154,7 @@
 }
 
 .col-0-height{
-    border:1px solid var(--color3);
+    border:1px solid var(--blue1);
     border-top: 0 !important;
     border-right: 0 !important;
     padding: 6.44px;
@@ -166,7 +168,7 @@
 }
 
 .line{
-    border:1px solid var(--color3);
+    border:1px solid var(--blue1);
     border-top: 0 !important;
     border-right: 0 !important;
     border-left: 0!important;
@@ -175,7 +177,7 @@
 }
 
 .line-0-height{
-    border:1px solid var(--color3);
+    border:1px solid var(--blue1);
     border-top: 0 !important;
     border-right: 0 !important;
     border-left: 0!important;
@@ -184,7 +186,7 @@
 }
 
 .hab{
-    border:1px solid var(--color3);
+    border:1px solid var(--blue1);
     border-bottom: 0 !important;
     margin-bottom: 1.34375em;
 }
@@ -215,12 +217,12 @@ table{
 
 ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex{
     background-color: #fff;
-    border-bottom: 3px solid var(--color3);
+    border-bottom: 3px solid var(--blue1);
     padding: 2px 2px 0 2px !important;
 }
 
 ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex:focus{
-    border-bottom: 2px solid var(--color3) !important;
+    border-bottom: 2px solid var(--blue1) !important;
 }
 
 ::ng-deep .mat-form-field-appearance-fill .mat-form-field-infix{
@@ -228,11 +230,11 @@ table{
 }
 
 ::ng-deep .mat-select-arrow{
-    color: var(--color2);
+    color: var(--orange2);
 }
 
 ::ng-deep .mat-icon-button{
-    color: var(--color2);
+    color: var(--orange2);
 }
 
 ::ng-deep .mat-stepper-vertical, .mat-stepper-horizontal{
@@ -244,9 +246,3 @@ table{
     width: 100%;
 }
 
-::ng-deep .mat-icon-button{
-  color: var(--color2) !important;
-}
-::ng-deep .mat-select-arrow{
-  color: var(--color2);
-}

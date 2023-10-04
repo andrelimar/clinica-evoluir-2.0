@@ -4,7 +4,7 @@
 }
 
 .color{
-    color: var(--color3);
+    color: var(--blue1);
 }
 
 .conteiner{
@@ -26,7 +26,7 @@
 .content-title{
   display: flex;
   text-align: center;
-  background-color: var(--color2);
+  background-color: var(--orange2);
   align-items: center;
   padding-left: 20px;
 }
@@ -62,7 +62,7 @@ form{
     border: 0;
     background-color: #fff;
     align-items: center;
-    border-bottom: 1px solid var(--color3);
+    border-bottom: 1px solid var(--blue1);
 }
 
 .input:hover{
@@ -84,8 +84,8 @@ form{
     color: #fff !important;
     font-size: 10px;
     padding: 0px 50px;
-    background-color: var(--color2) !important;
-    border: 2px solid var(--color2);
+    background-color: var(--orange2) !important;
+    border: 2px solid var(--orange2);
     cursor: pointer;
     font-weight: bold;
     margin-bottom: 10px;
@@ -94,8 +94,8 @@ form{
 
 .btn:hover{
   background-color: #fff !important;
-  color: var(--color1) !important;
-  border: 2px solid var(--color1) !important;
+  color: var(--orange1) !important;
+  border: 2px solid var(--orange1) !important;
 }
 
 ::ng-deep .mat-form-field{
@@ -107,22 +107,22 @@ form{
 
 ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex{
     background-color: #fff;
-    border-bottom: 3px solid var(--color3);
+    border-bottom: 3px solid var(--blue1);
     padding: 2px 2px 0 2px !important;
 }
 ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex:focus{
 
-    border-bottom: 2px solid var(--color3) !important;
+    border-bottom: 2px solid var(--blue1) !important;
 
 }
 ::ng-deep .mat-form-field-appearance-fill .mat-form-field-infix{
     padding: .25em 0 2px 0;
 }
 ::ng-deep .mat-select-arrow{
-    color: var(--color2);
+    color: var(--orange2);
 }
 ::ng-deep .mat-icon-button{
-    color: var(--color2);
+    color: var(--orange2);
 }
 ::ng-deep .mat-horizontal-content-container{
     padding: 0 24px 0px 24px !important;

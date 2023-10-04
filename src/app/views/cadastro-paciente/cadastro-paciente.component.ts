@@ -581,7 +581,7 @@ export class CadastroPacienteComponent implements OnInit {
     }))
 
     const familiar = this.formulario_familiar.getRawValue()
-    familiar.position = this.dataSource.length + 1
+    familiar.position = this.familiaresControlsArray.value.length
 
     // tabela familiares component
     this.tabelaFamiliaresComponent.dataSource?.push(familiar)

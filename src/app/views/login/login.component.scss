@@ -9,7 +9,7 @@
 }
 .content{
     border-radius: 15px;
-    background-color: var(--color3);
+    background-color: var(--blue1);
     width: 55%;
     height: 60%;
     display: flex;
@@ -19,7 +19,7 @@
 
 }
 .title{
-    color: var(--color3);
+    color: var(--blue1);
     font-size: 28px;
     text-transform:capitalize;
 }
@@ -38,16 +38,16 @@
     font-size: 10px;
     padding: 10px 50px;
     border: 0;
-    background-color: var(--color2);
-    border: 2px solid var(--color2);
+    background-color: var(--orange2);
+    border: 2px solid var(--orange2);
     cursor: pointer;
     font-weight: bold;
 
 }
 .btn:hover{
     background-color: #fff;
-    color: var(--color1);
-    border: 2px solid var(--color1);
+    color: var(--orange1);
+    border: 2px solid var(--orange1);
 }
 
 // .first-content{
@@ -107,7 +107,7 @@
     background-color: #ecf0f1;
     display: flex;
     align-items: center;
-    border-bottom: 2px solid var(--color3);
+    border-bottom: 2px solid var(--blue1);
 }
 
 .mat-icon{

@@ -25,19 +25,16 @@ export class ProgramasPacienteComponent implements OnInit {
   dataSource = listaProgramas;
 
   @ViewChild(MatTable) table: MatTable<Programas_paciente> | undefined;
- 
-  
+
+
   constructor(private _formBuilder: FormBuilder) {
    }
 
   adc_programas_pacientes(){
-    if(this.formulario_programas_paciente.invalid) return
-
-    const programas_paciente = this.formulario_programas_paciente.getRawValue()
+      const programas_paciente = this.formulario_programas_paciente.getRawValue()
     programas_paciente.position=this.dataSource.length+1
     this.dataSource.push(programas_paciente)
     this.table?.renderRows();
-    this.formulario_programas_paciente.reset()
   }
 
   delete(position:number){
