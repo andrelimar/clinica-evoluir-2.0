@@ -56,6 +56,7 @@ export class AgendamentoComponent implements OnInit {
 
   save(){
   this.dialog.open(DialogAgendamentoComponent)
+
   }
 
   }
