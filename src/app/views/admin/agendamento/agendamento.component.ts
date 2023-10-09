@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { DialogAgendamentoComponent } from '../../dialog-agendamento/dialog-agendamento.component';
 
 
 interface Terapeuta {
@@ -21,19 +22,6 @@ export interface DialogData {
   styleUrls: ['./agendamento.component.scss']
 })
 export class AgendamentoComponent implements OnInit {
-  // title: string;
-  // message: string;
-
-
-  // formulario: FormGroup = this._formBuilder.group({
-  //   nome_paciente: ['',Validators.required,],
-  //   data_nascimento: ['',Validators.required,],
-  //   idade: ['',Validators.required,],
-  //   sexo: ['',Validators.required,],
-  //   naturalidade: ['',Validators.required,],
-  //   endereco: ['',Validators.required,],
-  //   email: ['', Validators.required,],
-  // })
 
    terapeutas: Terapeuta[] = [
       {value: 'terapeuta1', viewValue: '001-ANA KOROLINA'},
@@ -41,14 +29,14 @@ export class AgendamentoComponent implements OnInit {
       {value: 'terapeuta3', viewValue: '003-WILLIAN PEREIRA'},
     ];
     horarios: Horario[] = [
-      {value: 'Horario', viewValue: '08:30'},
-      {value: 'Horario', viewValue: '09:30'},
-      {value: 'Horario', viewValue: '10:30'},
-      {value: 'Horario', viewValue: '11:30'},
-      {value: 'Horario', viewValue: '14:00'},
-      {value: 'Horario', viewValue: '15:00'},
-      {value: 'Horario', viewValue: '16:00'},
-      {value: 'Horario', viewValue: '17:00'}
+      {value: 'Horario1', viewValue: '08:30'},
+      {value: 'Horario2', viewValue: '09:30'},
+      {value: 'Horario3', viewValue: '10:30'},
+      {value: 'Horario4', viewValue: '11:30'},
+      {value: 'Horario5', viewValue: '14:00'},
+      {value: 'Horario6', viewValue: '15:00'},
+      {value: 'Horario7', viewValue: '16:00'},
+      {value: 'Horario8', viewValue: '17:00'}
     ];
 
     myFilter = (d: Date | null): boolean => {
@@ -66,10 +54,9 @@ export class AgendamentoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // save(){
-  //   const data = this.formulario.getRawValue()
-  //   console.log(data)
-  // }
+  save(){
+  this.dialog.open(DialogAgendamentoComponent)
+  }
 
   }
 
