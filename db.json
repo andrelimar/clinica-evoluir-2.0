@@ -1,0 +1,18 @@
+{
+"terapeutas": [
+  {"id": "1",  "viewValue":  "001-ANA KOROLINA"},
+  {"id": "2",  "viewValue":  "002-PEDRO LIMA"},
+  {"id": "3",  "viewValue":  "003-WILLIAN PEREIRA"}
+],
+"horarios":[
+  {"id": "1", "viewValue": "08:30"},
+  {"id": "2", "viewValue": "09:30"},
+  {"id": "3", "viewValue": "10:30"},
+  {"id": "4", "viewValue": "11:30"},
+  {"id": "5", "viewValue": "14:00"},
+  {"id": "6", "viewValue": "15:00"},
+  {"id": "7", "viewValue": "16:00"},
+  {"id": "8", "viewValue": "17:00"}
+]
+
+}

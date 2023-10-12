@@ -1,16 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogAgendamentoComponent } from '../../agendamento-dialog/dialog-agendamento.component';
+import { AgendamentoService } from 'src/app/services/agendamento.service';
+import { HorariosService } from 'src/app/services/horarios.service';
+import { TerapeutasService } from 'src/app/services/terapeutas.service';
+import { Terapeuta } from 'src/app/interfaces/Terapeutas';
+import { Horario } from 'src/app/interfaces/Horarios';
 
 
-interface Terapeuta {
-  value: string;
-  viewValue: string;
-}
-interface Horario {
-  value: string;
-  viewValue: string;
-}
 export interface DialogData {
   title: string;
   message: string;
@@ -24,22 +21,11 @@ export interface DialogData {
 export class AgendamentoComponent implements OnInit {
 
   name: string ='';
+  terapeuta: string='';
 
-  terapeutas: Terapeuta[] = [
-      {value: 'terapeuta1', viewValue: '001-ANA KOROLINA'},
-      {value: 'terapeuta2', viewValue: '002-PEDRO LIMA'},
-      {value: 'terapeuta3', viewValue: '003-WILLIAN PEREIRA'},
-    ];
-    horarios: Horario[] = [
-      {value: 'Horario1', viewValue: '08:30'},
-      {value: 'Horario2', viewValue: '09:30'},
-      {value: 'Horario3', viewValue: '10:30'},
-      {value: 'Horario4', viewValue: '11:30'},
-      {value: 'Horario5', viewValue: '14:00'},
-      {value: 'Horario6', viewValue: '15:00'},
-      {value: 'Horario7', viewValue: '16:00'},
-      {value: 'Horario8', viewValue: '17:00'}
-    ];
+  terapeutas: Terapeuta[] = [];
+
+  horarios: Horario[] = [];
 
     myFilter = (d: Date | null): boolean => {
       const day = (d || new Date()).getDay();
@@ -49,8 +35,13 @@ export class AgendamentoComponent implements OnInit {
     };
 
 
-  constructor(public dialog: MatDialog) { }
-
+  constructor(
+    public dialog: MatDialog,
+    private terapeutaService: TerapeutasService,
+    private horariosService: HorariosService )
+    {
+      this.getTerapeutas()
+    }
 
 
   ngOnInit(): void {
@@ -58,8 +49,13 @@ export class AgendamentoComponent implements OnInit {
 
   save(){
   this.dialog.open(DialogAgendamentoComponent)
-
   }
+
+  getTerapeutas():
+   void{
+    this.terapeutaService.getAll().subscribe((terapeutas) => this.terapeutas = terapeutas);
+    this.horariosService.getAll().subscribe((horarios) => this.horarios = horarios);
+   }
 
   }
 
