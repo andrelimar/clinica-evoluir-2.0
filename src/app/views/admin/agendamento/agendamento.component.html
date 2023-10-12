@@ -10,7 +10,8 @@
 
           <mat-form-field appearance="fill">
               <mat-label>Solicitante</mat-label>
-              <input matInput placeholder="" formControlOcupacao="" required>
+              <input matInput required type="text" [(ngModel)]="name">
+              <input type="submit" value="enviar"/>
             </mat-form-field>
 
           <mat-form-field appearance="fill" class="">

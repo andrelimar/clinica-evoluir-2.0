@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogAgendamentoComponent } from '../../dialog-agendamento/dialog-agendamento.component';
+import { DialogAgendamentoComponent } from '../../agendamento-dialog/dialog-agendamento.component';
 
 
 interface Terapeuta {
@@ -23,7 +23,9 @@ export interface DialogData {
 })
 export class AgendamentoComponent implements OnInit {
 
-   terapeutas: Terapeuta[] = [
+  name: string ='';
+
+  terapeutas: Terapeuta[] = [
       {value: 'terapeuta1', viewValue: '001-ANA KOROLINA'},
       {value: 'terapeuta2', viewValue: '002-PEDRO LIMA'},
       {value: 'terapeuta3', viewValue: '003-WILLIAN PEREIRA'},

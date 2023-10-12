@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './views/login/login.component';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { RouterModule } from '@angular/router';
     BrowserAnimationsModule,
     CommonModule,
     MatIconModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   providers: [{provide: MAT_DATE_LOCALE, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]
