@@ -4,7 +4,6 @@ import { AdminComponent } from './admin.component';
 import { AgendamentoComponent } from './agendamento/agendamento.component';
 import { RegistroAbaComponent } from './registro-aba/registro-aba.component';
 import { HomeComponent } from './home/home.component';
-import { DialogAgendamentoComponent } from '../agendamento-dialog/dialog-agendamento.component';
 import { MaterialModule } from 'src/app/angular-material-module.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
@@ -30,7 +29,6 @@ const routes: Routes = [
     AgendamentoComponent,
     RegistroAbaComponent,
     HomeComponent,
-    DialogAgendamentoComponent,
   ],
   imports: [
     CommonModule,
