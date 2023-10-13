@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
 
   itemsMenu = [
     {
-      title: "Agendar consulta",
+      title: "Agendamentos",
       action: () =>  this.rotas.navigate(['admin/agendamento'])
     },
     {

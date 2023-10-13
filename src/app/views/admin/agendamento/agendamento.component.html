@@ -1,53 +1,41 @@
-<app-header></app-header>
-<div class="container">
-  <div class="content">
-    <div class="content-title">
-      <h1 class="title-subheader">Agendamento</h1>
+<div class="w-full flex items-center justify-center flex-col">
+  <app-header-subtitle subtitle="Agendamentos"></app-header-subtitle>
+
+  <div class="w-[90%] flex flex-col justify-center bg-white rounded-lg p-4 boxShadow gap-3 mt-12">
+    <div class="w-full flex items-center justify-end">
+      <button class="button button-system" (click)="novoAgendamento()">Novo Agendamento</button>
     </div>
+    <table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="solicitante">
+      <th mat-header-cell *matHeaderCellDef> Solicitante </th>
+      <td mat-cell *matCellDef="let element"> {{element.solicitante}} </td>
+    </ng-container>
 
-    <div class="formulario">
-      <form [formGroup]="agendamento">
+    <ng-container matColumnDef="terapeuta">
+      <th mat-header-cell *matHeaderCellDef> Terapeuta </th>
+      <td mat-cell *matCellDef="let element"> {{element.terapeuta.viewValue}} </td>
+    </ng-container>
 
-        <mat-form-field appearance="fill">
-          <mat-label>Solicitante</mat-label>
-          <input matInput required type="text" formControlName="solicitante">
-        </mat-form-field>
+    <ng-container matColumnDef="dataAgendamento">
+      <th mat-header-cell *matHeaderCellDef> Data do Agendamento </th>
+      <td mat-cell *matCellDef="let element"> {{ element.dataAgendamento | date : "dd/MM/yyyy" }} </td>
+    </ng-container>
 
-        <mat-form-field appearance="fill" class="">
-          <mat-label class="font">Nome terapeuta</mat-label>
-          <mat-select type="text" formControlName="nomeTerapeuta">
-            <mat-option *ngFor="let terapeuta of terapeutas" [value]="terapeuta.id">
-              {{"00" + terapeuta.id + " - " + terapeuta.viewValue}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
+    <ng-container matColumnDef="horarioAgendamento">
+      <th mat-header-cell *matHeaderCellDef> Horário </th>
+      <td mat-cell *matCellDef="let element"> {{element.horarioAgendamento.viewValue}} </td>
+    </ng-container>
 
-        <div class="content-1">
-          <mat-form-field appearance="fill" class="example-full-width componente-1-2">
-            <mat-label>Data Agendamento</mat-label>
-            <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker" formControlName="dataAgendamento">
-            <mat-datepicker-toggle matSuffix [for]="picker" class="color"></mat-datepicker-toggle>
-            <mat-datepicker #picker class=""></mat-datepicker>
-          </mat-form-field>
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef> Ações </th>
+      <td mat-cell *matCellDef="let element">
+        <mat-icon class="text-red-500 cursor-pointer" (click)="abrirModal(element.id)">delete</mat-icon>
+      </td>
+    </ng-container>
 
-          <mat-form-field class="example-full-width componente-1-2" appearance="fill">
-            <mat-label>Horario Agendamento</mat-label>
-            <mat-select formControlName="horarioAgendamento">
-              <mat-option *ngFor="let horario of horarios" [value]="horario.id">
-                {{horario.viewValue}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-        </div>
-
-        <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label>Descrição</mat-label>
-          <textarea matInput formControlName="descricao" required></textarea>
-        </mat-form-field>
-        <div style="text-align: right; width: 100%;">
-          <button mat-button class="btn" (click)="saveData()">Salvar Agendamento</button>
-        </div>
-      </form>
-    </div>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [length]="length" [showFirstLastButtons]="true"></mat-paginator>
   </div>
 </div>

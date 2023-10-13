@@ -1,11 +1,16 @@
 
+
+:host{
+  width: 100%;
+}
+
 .font{
     color: #878787;
 }
 .color{
     color: var(--blue1);
 }
-.conteiner{
+.page{
   align-items: center;
   justify-content: center;
   display: block;

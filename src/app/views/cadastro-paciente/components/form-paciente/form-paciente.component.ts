@@ -18,7 +18,10 @@ export class FormPacienteComponent implements OnInit {
     {value: 'sexo_feminino', viewValue: 'FEMININO'},
   ];
 
-  constructor(private readonly _formBuilder: FormBuilder) { }
+
+  next: boolean = false;
+
+  constructor() { }
 
   ngOnInit(): void {
   }

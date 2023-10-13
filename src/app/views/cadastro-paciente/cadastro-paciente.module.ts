@@ -27,6 +27,7 @@ import { FormPacientePartIIComponent } from './components/form-paciente-part-ii/
 import { FormAprendizadoEscolarizacaoPartIIComponent } from './components/form-aprendizado-escolarizacao-part-ii/form-aprendizado-escolarizacao-part-ii.component';
 import { TabelaFamiliaresComponent } from './components/tabela-familiares/tabela-familiares.component';
 import { HeaderComponent } from 'src/app/components/header/header.component';
+import { HeaderSubtitleComponent } from 'src/app/components/subtitle/subtitle.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { HeaderComponent } from 'src/app/components/header/header.component';
     MaterialModule,
     CadastroPacienteoutingModule,
     ReactiveFormsModule,
-    HeaderComponent
+    HeaderComponent,
+    HeaderSubtitleComponent
   ],
 })
 export class CadastroPacienteModule { }

@@ -1,5 +1,4 @@
 
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -10,6 +9,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'clinica-evoluir-2.0';
 
-  constructor( private http : HttpClient){}
-
+  constructor(){}
 }

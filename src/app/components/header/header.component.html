@@ -1,4 +1,4 @@
-<header class="container">
+<header class="header">
     <div class="first-content">
         <button mat-button [matMenuTriggerFor]="menu">
             <mat-icon>menu</mat-icon>
@@ -8,7 +8,9 @@
           <button mat-menu-item (click)="item.action()" *ngFor="let item of itemsMenu">{{ item.title }}</button>
         </mat-menu>
         <div class="container-lg">
-           <a><button (click)="log_in()" class="bt-logo"><img src="../../../assets/Nucléo.png" alt="Image"></button> </a>
+           <a>
+            <button (click)="log_in()" class="bt-logo"><img src="../../../assets/Nucléo.png" alt="Image"></button>
+          </a>
     </div>
    </div>
 
