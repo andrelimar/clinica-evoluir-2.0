@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Agendamento } from '../interfaces/Agendamento';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -15,5 +15,14 @@ export class AgendamentoService {
 
   salvarAgendamento(agendamento: Agendamento): Observable<Agendamento>{
     return this.http.post<Agendamento>(this.apiUrl, agendamento);
+  }
+
+  obterAgendamentos(): Observable<Agendamento[]>{
+    return this.http.get<Agendamento[]>(this.apiUrl);
+  }
+
+  deletarAgendamento(id: string): Observable<Agendamento[]>{
+    const url = `${this.apiUrl}/${id}`
+    return this.http.delete<Agendamento[]>(url);
   }
 }

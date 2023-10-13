@@ -54,51 +54,73 @@
   "agendamentos": [
     {
       "solicitante": "ana karolina",
-      "nomeTerapeuta": "4",
+      "terapeuta": {
+        "id": "3",
+        "viewValue": "WILLIAN PEREIRA"
+      },
       "dataAgendamento": "2023-10-06T03:00:00.000Z",
-      "horarioAgendamento": "5",
+      "horarioAgendamento": {
+        "id": "1",
+        "viewValue": "08:30"
+      },
       "descricao": "Agendamento teste",
       "id": "Roq62OI"
     },
     {
-      "solicitante": "ana karolina",
-      "nomeTerapeuta": "4",
-      "dataAgendamento": "2023-10-06T03:00:00.000Z",
-      "horarioAgendamento": "5",
-      "descricao": "Agendamento teste",
-      "id": "5yXugPi"
-    },
-    {
       "solicitante": "sadfasdf",
-      "nomeTerapeuta": "1",
-      "dataAgendamento": "2023-10-06T03:00:00.000Z",
-      "horarioAgendamento": "2",
-      "descricao": "sadfasdf",
-      "id": "QGXZ4YS"
-    },
-    {
-      "solicitante": "asdfasdf",
-      "nomeTerapeuta": "1",
-      "dataAgendamento": "2023-10-12T03:00:00.000Z",
-      "horarioAgendamento": "2",
-      "descricao": "sdfadsf",
-      "id": "OhSruqs"
-    },
-    {
-      "solicitante": "dfasdf",
-      "nomeTerapeuta": "2",
-      "dataAgendamento": "2023-10-06T03:00:00.000Z",
-      "horarioAgendamento": "3",
+      "terapeuta": {
+        "id": "2",
+        "viewValue": "PEDRO LIMA"
+      },
+      "dataAgendamento": "2023-10-24T03:00:00.000Z",
+      "horarioAgendamento": {
+        "id": "4",
+        "viewValue": "11:30"
+      },
       "descricao": "asdfasdf",
-      "id": "UOVgL2k"
+      "id": "71YGKZx"
     },
     {
-      "solicitante": "sdfasdf",
-      "nomeTerapeuta": "1",
+      "solicitante": "tete",
+      "terapeuta": {
+        "id": "2",
+        "viewValue": "PEDRO LIMA"
+      },
+      "dataAgendamento": "2023-10-05T03:00:00.000Z",
+      "horarioAgendamento": {
+        "id": "7",
+        "viewValue": "16:00"
+      },
+      "descricao": "asfadsfasdf",
+      "id": "n25xaO2"
+    },
+    {
+      "solicitante": "sdfasdfasdf",
+      "terapeuta": {
+        "id": "3",
+        "viewValue": "WILLIAN PEREIRA"
+      },
+      "dataAgendamento": "2023-10-26T03:00:00.000Z",
+      "horarioAgendamento": {
+        "id": "7",
+        "viewValue": "16:00"
+      },
+      "descricao": "sadfasfdasdfasdf",
+      "id": "m6i-vrz"
+    },
+    {
+      "solicitante": "sdfasdfa",
+      "terapeuta": {
+        "id": "2",
+        "viewValue": "PEDRO LIMA"
+      },
       "dataAgendamento": "2023-10-20T03:00:00.000Z",
-      "horarioAgendamento": "2",
-      "descricao": "asdfasdf",
-      "id": "z1iXIpo"
+      "horarioAgendamento": {
+        "id": "7",
+        "viewValue": "16:00"
+      },
+      "descricao": "asdfasdfasdf",
+      "id": "JsNteoi"
     }
   ]
 }

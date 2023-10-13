@@ -1,0 +1,50 @@
+<div class="w-full">
+  <div class="content">
+    <app-header-subtitle subtitle="Novo Agendamento"></app-header-subtitle>
+    <div class="formulario">
+      <form [formGroup]="agendamento">
+
+        <mat-form-field appearance="fill">
+          <mat-label>Solicitante</mat-label>
+          <input matInput required type="text" formControlName="solicitante">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="">
+          <mat-label class="font">Nome terapeuta</mat-label>
+          <mat-select type="text" formControlName="terapeuta">
+            <mat-option *ngFor="let terapeuta of terapeutas" [value]="terapeuta">
+              {{"00" + terapeuta.id + " - " + terapeuta.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div class="content-1">
+          <mat-form-field appearance="fill">
+            <mat-label>Data Agendamento</mat-label>
+            <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker" formControlName="dataAgendamento">
+            <mat-datepicker-toggle matSuffix [for]="picker" class="color"></mat-datepicker-toggle>
+            <mat-datepicker #picker class=""></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Horario Agendamento</mat-label>
+            <mat-select formControlName="horarioAgendamento">
+              <mat-option *ngFor="let horario of horarios" [value]="horario">
+                {{horario.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Descrição</mat-label>
+          <textarea matInput formControlName="descricao" required></textarea>
+        </mat-form-field>
+        <div class="flex gap-2 w-full items-center justify-end">
+          <button class="button button-system" (click)="saveData()">Salvar Agendamento</button>
+          <button class="button button-default" (click)="cancelar()">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

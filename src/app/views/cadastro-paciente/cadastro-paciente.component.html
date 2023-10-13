@@ -1,15 +1,14 @@
-<app-header></app-header>
-
-<div class="conteiner">
+<div class="page w-full">
   <div class="content">
-    <div class="content-title">
-      <h1 class="title-subheader">Cadastro de paciente</h1>
-    </div>
+    <app-header-subtitle subtitle="Cadastro de paciente"></app-header-subtitle>
 
     <mat-stepper #stepper *ngIf="parte1" class="IDENTIFICAÇÃO">
-      <mat-step>
+      <mat-step [stepControl]="formulario_paciente">
         <ng-template matStepLabel>Dados Pessoais</ng-template>
         <app-form-paciente [formulario_paciente]="formulario_paciente"></app-form-paciente>
+        <div style="text-align: right">
+          <button mat-button matStepperNext class="btn">Proximo</button>
+        </div>
       </mat-step>
 
       <mat-step>
