@@ -1,18 +1,96 @@
 {
-"terapeutas": [
-  {"id": "1",  "viewValue":  "001-ANA KOROLINA"},
-  {"id": "2",  "viewValue":  "002-PEDRO LIMA"},
-  {"id": "3",  "viewValue":  "003-WILLIAN PEREIRA"}
-],
-"horarios":[
-  {"id": "1", "viewValue": "08:30"},
-  {"id": "2", "viewValue": "09:30"},
-  {"id": "3", "viewValue": "10:30"},
-  {"id": "4", "viewValue": "11:30"},
-  {"id": "5", "viewValue": "14:00"},
-  {"id": "6", "viewValue": "15:00"},
-  {"id": "7", "viewValue": "16:00"},
-  {"id": "8", "viewValue": "17:00"}
-]
-
+  "terapeutas": [
+    {
+      "id": "1",
+      "viewValue": "ANA KOROLINA"
+    },
+    {
+      "id": "2",
+      "viewValue": "PEDRO LIMA"
+    },
+    {
+      "id": "3",
+      "viewValue": "WILLIAN PEREIRA"
+    },
+    {
+      "id": "4",
+      "viewValue": "Elany Pedrosa"
+    }
+  ],
+  "horarios": [
+    {
+      "id": "1",
+      "viewValue": "08:30"
+    },
+    {
+      "id": "2",
+      "viewValue": "09:30"
+    },
+    {
+      "id": "3",
+      "viewValue": "10:30"
+    },
+    {
+      "id": "4",
+      "viewValue": "11:30"
+    },
+    {
+      "id": "5",
+      "viewValue": "14:00"
+    },
+    {
+      "id": "6",
+      "viewValue": "15:00"
+    },
+    {
+      "id": "7",
+      "viewValue": "16:00"
+    },
+    {
+      "id": "8",
+      "viewValue": "17:00"
+    }
+  ],
+  "agendamentos": [
+    {
+      "id": "1",
+      "solicitante": "Elany",
+      "nomeTerapeuta": [
+        "1",
+        "Elany"
+      ],
+      "dataAgendamento": "2023-10-13",
+      "horarioAgendamento": [
+        "2",
+        "09:00"
+      ],
+      "descricao": "string"
+    },
+    {
+      "id": "2",
+      "solicitante": "Elany",
+      "nomeTerapeuta": "272",
+      "dataAgendamento": "2023-10-13",
+      "horarioAgendamento": [
+        "2",
+        "09:00"
+      ],
+      "descricao": "string"
+    },
+    {
+      "id": "3",
+      "solicitante": "Elany",
+      "nomeTerapeuta": [
+        "2",
+        "09:00",
+        "adasf"
+      ],
+      "dataAgendamento": "2023-10-13",
+      "horarioAgendamento": [
+        "2",
+        "09:00"
+      ],
+      "descricao": "string"
+    }
+  ]
 }

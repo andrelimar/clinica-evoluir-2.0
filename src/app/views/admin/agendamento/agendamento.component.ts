@@ -6,6 +6,8 @@ import { HorariosService } from 'src/app/services/horarios.service';
 import { TerapeutasService } from 'src/app/services/terapeutas.service';
 import { Terapeuta } from 'src/app/interfaces/Terapeutas';
 import { Horario } from 'src/app/interfaces/Horarios';
+import { Agendamento } from 'src/app/interfaces/Agendamento';
+import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 export interface DialogData {
@@ -20,8 +22,17 @@ export interface DialogData {
 })
 export class AgendamentoComponent implements OnInit {
 
-  name: string ='';
-  terapeuta: string='';
+  agendamentosControlsArray!: FormArray
+
+  agendamento : FormGroup = this._formBuilder.group({
+    solicitante:  ['', Validators.required],
+    nomeTerapeuta:  ['', Validators.required],
+    dataAgendamento:  ['', Validators.required],
+    horarioAgendamento:  ['', Validators.required],
+    descricao:  ['', Validators.required]
+  })
+
+
 
   terapeutas: Terapeuta[] = [];
 
@@ -38,7 +49,8 @@ export class AgendamentoComponent implements OnInit {
   constructor(
     public dialog: MatDialog,
     private terapeutaService: TerapeutasService,
-    private horariosService: HorariosService )
+    private horariosService: HorariosService,
+    private _formBuilder: FormBuilder)
     {
       this.getTerapeutas()
     }
@@ -47,8 +59,21 @@ export class AgendamentoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  save(){
-  this.dialog.open(DialogAgendamentoComponent)
+  saveData(){
+    this.agendamentosControlsArray.push(this._formBuilder.group({
+      solicitante: [this.agendamento.get('solicitante')?.value],
+      nomeTerapeuta: [this.agendamento.get('nomeTerapeuta')?.value],
+      dataAgendamento:[this.agendamento.get('dataAgendamento')?.value],
+      horarioAgendamento: [this.agendamento.get('horarioAgendamento')?.value],
+      descricao: [this.agendamento.get('descricao')?.value]
+
+
+    }))
+
+    const Agendamento = this.agendamento.getRawValue()
+    console.log(Agendamento)
+
+    this.dialog.open(DialogAgendamentoComponent)
   }
 
   getTerapeutas():
