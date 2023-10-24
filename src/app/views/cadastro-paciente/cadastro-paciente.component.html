@@ -1,6 +1,7 @@
-<div class="page w-full">
-  <div class="content">
-    <app-header-subtitle subtitle="Cadastro de paciente"></app-header-subtitle>
+<app-header></app-header>
+
+<div class="w-full flex items-center justify-center flex-col">
+    <app-header-subtitle subtitle="Cadastro de Paciente"></app-header-subtitle>
 
     <mat-stepper #stepper *ngIf="parte1" class="IDENTIFICAÇÃO">
       <mat-step [stepControl]="formulario_paciente">
@@ -253,4 +254,3 @@
       </mat-step>
     </mat-stepper>
   </div>
-</div>

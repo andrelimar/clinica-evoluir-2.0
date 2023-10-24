@@ -9,7 +9,6 @@ import { MatPaginator } from '@angular/material/paginator';
 import Swal from 'sweetalert2';
 
 
-
 @Component({
   selector: 'app-agendamento',
   templateUrl: './agendamento.component.html',

@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-paciente',
   templateUrl: './paciente.component.html',
-  styleUrls: ['./paciente.component.scss']
+  styleUrls: ['../admin/agendamento/agendamento.component.scss']
 })
 export class PacienteComponent implements OnInit, AfterViewInit {
 
@@ -36,7 +36,7 @@ export class PacienteComponent implements OnInit, AfterViewInit {
   }
 
   novoPaciente(){
-    this.router.navigate(['/cadastro-paciente'])
+    this.router.navigate(['../cadastro-paciente'])
   }
 
   get length(){

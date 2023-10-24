@@ -11,10 +11,18 @@ const routes: Routes = [
     path: 'admin',
     loadChildren: () => import('./views/admin/admin.module').then(m => m.AdminModule),
   },
+  {
+    path: 'cadastro-paciente',
+    loadChildren: () =>import('./views/cadastro-paciente/cadastro-paciente.module').then((m) => m.CadastroPacienteModule),
+  },
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), RouterModule],
+  imports: [
+    RouterModule.forRoot(routes), 
+    RouterModule
+  ],
+  
 })
 export class AppRoutingModule { }

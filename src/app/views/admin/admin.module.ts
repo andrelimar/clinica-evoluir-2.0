@@ -12,8 +12,6 @@ import { FormularioAgendamentoComponent } from './formulario-agendamento/formula
 import { MatPaginatorModule} from '@angular/material/paginator';
 import { HeaderSubtitleComponent } from 'src/app/components/subtitle/subtitle.component';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import { PacienteComponent } from '../paciente/paciente.component';
-import { CadastroPacienteComponent } from '../cadastro-paciente/cadastro-paciente.component';
 
 
 const routes: Routes = [

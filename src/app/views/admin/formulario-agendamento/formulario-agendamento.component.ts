@@ -11,11 +11,6 @@ import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 
-export interface DialogData {
-  title: string;
-  message: string;
-}
-
 @Component({
   selector: 'app-formulario-agendamento',
   templateUrl: './formulario-agendamento.component.html',
