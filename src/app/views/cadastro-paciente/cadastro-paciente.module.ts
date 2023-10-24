@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CadastroPacienteComponent } from './cadastro-paciente.component';
 import { MaterialModule } from 'src/app/angular-material-module.module';
-import { CadastroPacienteoutingModule } from './cadastr-paciente.routing.module';
+import { CadastroPacienteRoutingModule } from './cadastro-paciente.routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormPacienteComponent } from './components/form-paciente/form-paciente.component';
 import { FormQueixaComponent } from './components/form-queixa/form-queixa.component';
@@ -58,7 +58,7 @@ import { HeaderSubtitleComponent } from 'src/app/components/subtitle/subtitle.co
   imports: [
     CommonModule,
     MaterialModule,
-    CadastroPacienteoutingModule,
+    CadastroPacienteRoutingModule,
     ReactiveFormsModule,
     HeaderComponent,
     HeaderSubtitleComponent

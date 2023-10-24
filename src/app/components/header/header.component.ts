@@ -24,8 +24,8 @@ export class HeaderComponent implements OnInit {
       action: () =>  this.rotas.navigate(['admin/registro-aba'])
     },
     {
-      title: "Cadastrar paciente",
-      action: () =>  this.rotas.navigate(['admin/cadastro-paciente'])
+      title: "Pacientes",
+      action: () =>  this.rotas.navigate(['admin/paciente'])
     },
     {
       title: "Programas paciente",

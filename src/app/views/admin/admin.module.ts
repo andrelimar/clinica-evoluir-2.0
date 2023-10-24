@@ -9,9 +9,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from 'src/app/components/header/header.component';
 import { FormularioAgendamentoComponent } from './formulario-agendamento/formulario-agendamento.component';
-import {MatPaginatorModule} from '@angular/material/paginator';
+import { MatPaginatorModule} from '@angular/material/paginator';
 import { HeaderSubtitleComponent } from 'src/app/components/subtitle/subtitle.component';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { PacienteComponent } from '../paciente/paciente.component';
+import { CadastroPacienteComponent } from '../cadastro-paciente/cadastro-paciente.component';
+
 
 const routes: Routes = [
   { path: '', component: AdminComponent, children: [
@@ -19,6 +22,10 @@ const routes: Routes = [
     { path: 'agendamento', component: AgendamentoComponent },
     { path: 'agendamento-cadastro', component: FormularioAgendamentoComponent },
     { path: 'registro-aba', component: RegistroAbaComponent },
+    {
+      path: 'paciente',
+      loadChildren: () =>import('../paciente/paciente.module').then((m) => m.PacienteModule),
+    },
     {
       path: 'cadastro-paciente',
       loadChildren: () =>import('../cadastro-paciente/cadastro-paciente.module').then((m) => m.CadastroPacienteModule),
@@ -36,7 +43,8 @@ const routes: Routes = [
     AgendamentoComponent,
     RegistroAbaComponent,
     HomeComponent,
-    FormularioAgendamentoComponent,
+    FormularioAgendamentoComponent
+
   ],
   imports: [
     CommonModule,

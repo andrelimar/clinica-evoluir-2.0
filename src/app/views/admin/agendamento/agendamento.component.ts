@@ -9,10 +9,6 @@ import { MatPaginator } from '@angular/material/paginator';
 import Swal from 'sweetalert2';
 
 
-export interface DialogData {
-  title: string;
-  message: string;
-}
 
 @Component({
   selector: 'app-agendamento',

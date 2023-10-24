@@ -1,0 +1,35 @@
+<div class="page w-full">
+  <div class="content">
+    <app-header-subtitle subtitle="Cadastro de paciente"></app-header-subtitle>
+
+    <div class="w-[90%] flex flex-col justify-center bg-white rounded-lg p-4 boxShadow gap-3 mt-12">
+      <div class="w-full flex items-center justify-end">
+        <button class="button button-system" (click)="novoPaciente()">Novo Paciente</button>
+      </div>
+      <table mat-table [dataSource]="dataSource">
+        
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="paciente">
+        <th mat-header-cell *matHeaderCellDef> Paciente </th>
+        <td mat-cell *matCellDef="let element"> {{element.paciente.viewValue}} </td>
+      </ng-container>
+  
+  
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef> Ações </th>
+        <td mat-cell *matCellDef="let element">
+          <mat-icon class="text-red-500 cursor-pointer" (click)="abrirModal(element.id)">delete</mat-icon>
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [length]="length" [showFirstLastButtons]="true"></mat-paginator>
+    </div>
+  </div>
+</div>
