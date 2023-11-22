@@ -1,4 +1,5 @@
 export interface Terapeuta {
   id: string;
-  viewValue: string;
+  nomeTerapeuta: string;
+  especializacao:  string;
 }

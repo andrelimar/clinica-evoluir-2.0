@@ -25,7 +25,7 @@ export class AgendamentoComponent implements OnInit, AfterViewInit {
   };
 
   dataSource: MatTableDataSource<Agendamento> = new MatTableDataSource();
-  displayedColumns: string[] = ['solicitante', 'terapeuta', 'dataAgendamento', 'horarioAgendamento', "action"];
+  displayedColumns: string[] = ['solicitante', 'terapeuta', 'especializacao','dataAgendamento', 'horarioAgendamento', "action"];
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(

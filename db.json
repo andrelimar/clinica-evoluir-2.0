@@ -2,54 +2,89 @@
   "terapeutas": [
     {
       "id": "1",
-      "viewValue": "ANA KOROLINA"
+      "nomeTerapeuta": "NEYLLA CRISTHINA",
+      "especializacao": "Psicologa"
     },
     {
       "id": "2",
-      "viewValue": "PEDRO LIMA"
+      "nomeTerapeuta": "ANA KOROLINA",
+      "especializacao": "Psicologa"
     },
     {
       "id": "3",
-      "viewValue": "WILLIAN PEREIRA"
+      "nomeTerapeuta": "PEDRO LIMA",
+      "especializacao": "Psiquiatra"
     },
     {
       "id": "4",
-      "viewValue": "Elany Pedrosa"
+      "nomeTerapeuta": "WILLIAN PEREIRA",
+      "especializacao": "Pedagogo"
+    },
+    {
+      "id": "5",
+      "nomeTerapeuta": "Elany Pedrosa",
+      "especializacao": "Psicologa"
     }
   ],
   "horarios": [
     {
       "id": "1",
-      "viewValue": "08:30"
+      "horario": "08:30",
+      "periodo": "manhã"
     },
     {
       "id": "2",
-      "viewValue": "09:30"
+      "horario": "09:30",
+      "periodo": "manhã"
     },
     {
       "id": "3",
-      "viewValue": "10:30"
+      "horario": "10:30",
+      "periodo": "manhã"
     },
     {
       "id": "4",
-      "viewValue": "11:30"
+      "horario": "11:30",
+      "periodo": "manhã"
     },
     {
       "id": "5",
-      "viewValue": "14:00"
+      "horario": "14:00",
+      "periodo": "tarde"
     },
     {
       "id": "6",
-      "viewValue": "15:00"
+      "horario": "15:00",
+      "periodo": "tarde"
     },
     {
       "id": "7",
-      "viewValue": "16:00"
+      "horario": "16:00",
+      "periodo": "tarde"
     },
     {
       "id": "8",
-      "viewValue": "17:00"
+      "horario": "17:00",
+      "periodo": "tarde"
     }
   ],
-  "agendamentos": []
+  "agendamentos": [
+    {
+      "solicitante": "asfasas",
+      "terapeuta": {
+        "id": "1",
+        "nomeTerapeuta": "NEYLLA CRISTHINA",
+        "especializacao": "Psicologa"
+      },
+      "dataAgendamento": "2023-10-27T03:00:00.000Z",
+      "horarioAgendamento": {
+        "id": "5",
+        "horario": "14:00",
+        "periodo": "tarde"
+      },
+      "descricao": "sfasfscccasasfwafas",
+      "id": 1
+    }
+  ],
+  "pacientes": []
 }

@@ -13,17 +13,24 @@
 
     <ng-container matColumnDef="terapeuta">
       <th mat-header-cell *matHeaderCellDef> Terapeuta </th>
-      <td mat-cell *matCellDef="let element"> {{element.terapeuta.viewValue}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.terapeuta.nomeTerapeuta}}</td>
     </ng-container>
+
+    <ng-container matColumnDef="especializacao">
+      <th mat-header-cell *matHeaderCellDef> Especialização</th>
+      <td mat-cell *matCellDef="let element"> {{element.terapeuta.especializacao}}</td>
+    </ng-container>
+
 
     <ng-container matColumnDef="dataAgendamento">
       <th mat-header-cell *matHeaderCellDef> Data do Agendamento </th>
       <td mat-cell *matCellDef="let element"> {{ element.dataAgendamento | date : "dd/MM/yyyy" }} </td>
     </ng-container>
+    
 
     <ng-container matColumnDef="horarioAgendamento">
       <th mat-header-cell *matHeaderCellDef> Horário </th>
-      <td mat-cell *matCellDef="let element"> {{element.horarioAgendamento.viewValue}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.horarioAgendamento.horario}} </td>
     </ng-container>
 
     <ng-container matColumnDef="action">

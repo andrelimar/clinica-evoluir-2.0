@@ -1,4 +1,5 @@
 export interface Horario {
   id: string;
-  viewValue: string;
+  horario: string;
+  periodo: string;
 }

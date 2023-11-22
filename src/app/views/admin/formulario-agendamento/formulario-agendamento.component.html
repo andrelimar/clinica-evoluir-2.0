@@ -13,7 +13,7 @@
           <mat-label class="font">Nome terapeuta</mat-label>
           <mat-select type="text" formControlName="terapeuta">
             <mat-option *ngFor="let terapeuta of terapeutas" [value]="terapeuta">
-              {{"00" + terapeuta.id + " - " + terapeuta.viewValue}}
+              {{"00" + terapeuta.id + " - " + terapeuta.nomeTerapeuta + " - " + terapeuta.especializacao}}
             </mat-option>
           </mat-select>
         </mat-form-field>
@@ -30,7 +30,7 @@
             <mat-label>Horario Agendamento</mat-label>
             <mat-select formControlName="horarioAgendamento">
               <mat-option *ngFor="let horario of horarios" [value]="horario">
-                {{horario.viewValue}}
+                {{horario.horario}}
               </mat-option>
             </mat-select>
           </mat-form-field>
